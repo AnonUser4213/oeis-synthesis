@@ -5,15 +5,28 @@ This repository contains the software QSynt accompanying the paper
 Solutions found during the full-scale self-learning run can be inspected in the file `results/solutions`.
 
 ### Try the Web interface
-http://3.71.110.215/~anon/qsynt.html
+http://3.71.110.215/~anon1/qsynt.html
+
+### Installing Poly/ML
+In your /home/your_username directory:
+
+```
+git clone https://github.com/polyml/polyml
+cd polyml
+git checkout fixes-5.9
+./configure --prefix=/usr
+make
+make install
+```
+
+(Note that if you instead install the Ubuntu defaults by `apt install polyml libpolyml-dev` , these are old versions that may be buggy.)
+
 
 ### Install on the Ubuntu OS a modified HOL (required)
 In your /home/your_username directory:
 
 ```
 sudo apt install rlwrap
-sudo apt install polyml
-sudo apt install libpolyml-dev
 git clone https://github.com/HOL-Theorem-Prover/HOL
 cd HOL
 git checkout cf03ce2dc756feb6c0bc4b042f879595d21f2e68
